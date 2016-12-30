@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+    <script src="js/videofile.js"></script>
+</head>
+<body OnKeydown="handleEvent(event);" onresize="fu()">
+        <div class="body_title">
+            <h3>熟悉My Video</h3>
+            <p>只要一个账号，就可以观看本站所有视频。</p>
+        </div>
+        <input type="file" name="fileToUpload" id="fileToUpload" onchange="fileSelected()" accept=".mp4"/>
+        点击左侧可选择本机资源（目前支持的格式有：MP4，mkv，Ogg等）<a href="help.html" target="mainFrame">使用说明</a>
+        <!-- 具备自动播放、显示用户控件、播放完毕后循环播放功能的video标签 -->
+        <div class="myvideo">
+            <video id="myVideo" name="myVideo" src="video/Javascript语法-跳转语句.mp4" autoplay="autoplay" controls="controls" loop="loop" OnKeyPress="handleEvent(event)">
+            您的浏览器不支持video标签
+            </video>
+            <h5 align="center">操作说明：空格为暂停，方向键左和右分别为前进和后退，enter为全屏（可能失灵）</h5>
+        </div>
+        <hr/>
+        <hr/>
+        <div class="photo">
+            <a>
+            <img src="image/Screen.png" name="video/JS浏览器对象-Screen对象.mp4"
+                 onclick="changeVideo(this.name)"border="0">
+            <span>JS浏览器对象-Screen对象</span>
+            </a>
+            <a>
+            <img src="image/tiaozhuan.png" name="video/Javascript语法-跳转语句.mp4"
+                 onclick="changeVideo(this.name)"border="0">
+            <span>video/Javascript语法-跳转语句</span>
+            </a>
+            <a>
+            <img src="image/Screen.png" name="video/JS浏览器对象-Screen对象.mp4"
+                 onclick="changeVideo(this.name)"border="0">
+            <span>video/JS浏览器对象-Screen对象</span>
+            </a>
+        </div>
+
+</body>
+</html>
